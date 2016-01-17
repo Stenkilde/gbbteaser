@@ -1,3 +1,45 @@
+.animated-holder {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	text-align: center;
+	h2 {
+		font-size: 22px;
+		color: #fff;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px #000000;
+	}
+}
+
+.animated-content {
+	position: relative;
+	height: 100vh;
+	margin-bottom: -100vh;
+	transition: all 3s ease-in-out;
+	h2 {
+		font-size: 22px;
+		position: absolute;
+		z-index: 100;
+		color: #fff;
+		font-weight: 700;
+	}
+
+	.left {
+		bottom: 10%;
+		left: 50%;
+		animation: enterLeft 1.5s;
+		transform: translateX(-50%);
+	}
+
+	.right {
+		bottom: 6%;
+		right: 50%;
+		animation: enterRight 1.5s;
+		transform: translateX(50%);
+	}
+}
+
 #slider {
 	overflow: hidden;
 	.owl-item {
@@ -15,6 +57,14 @@
 					background-repeat: no-repeat;
 				    background-position-y: center;
 				}
+
+				@media #{$medium-up} {
+					.animated-holder {
+						left:35px;
+						transform:translateX(0%);
+						text-align:left;
+					}
+				}
 			}
 		}
 		&:nth-child(2) {
@@ -24,6 +74,13 @@
 					background-repeat: no-repeat;
 				    background-position-y: center;
 				}
+				@media #{$medium-up} {
+					.animated-holder {
+						left:35px;
+						transform:translateX(0%);
+						text-align:left;
+					}
+				}
 			}
 		}
 		&:nth-child(3) {
@@ -31,7 +88,7 @@
 				background: url('../assets/5_Gaggenau.jpg');
 				@media #{$small-up} {
 					background-repeat: no-repeat;
-					background-position-y: center;
+					background-position-y: 0%;
 				}
 			}
 		}
@@ -41,6 +98,13 @@
 				@media #{$small-up} {
 					background-repeat: no-repeat;
 				    background-position-y: center;
+				}
+				@media #{$medium-up} {
+					.animated-holder {
+						left:35px;
+						transform:translateX(0%);
+						text-align:left;
+					}
 				}
 			}
 		}
@@ -55,6 +119,7 @@
 		&:nth-child(6) {
 			.image-slide {
 				background: url('../assets/10_Miklagard.jpg');
+				background-position-x: 50%;
 				@media #{$small-up} {
 					background-repeat: no-repeat;
 				}
@@ -75,6 +140,10 @@
 					background-repeat: no-repeat;
 					    background-position-y: left top;
 				}
+
+				.animated-holder {
+					left:calc(50% - 130px);
+				}
 			}
 		}
 		&:nth-child(9) {
@@ -82,6 +151,13 @@
 				background: url('../assets/14_Quooker.jpg');
 				@media #{$small-up} {
 					background-repeat: no-repeat;
+				}
+				@media #{$medium-up} {
+					.animated-holder {
+						left:35px;
+						transform:translateX(0%);
+						text-align:left;
+					}
 				}
 			}
 		}
