@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Stenkilde <hello@stenkil.de>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.1.1"
+  }
+}

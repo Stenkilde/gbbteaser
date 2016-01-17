@@ -1,0 +1,88 @@
+@import "../libs/foundation-sites/assets/foundation-flex";
+@import "../plugins/owl.carousel.css";
+@import "../plugins/owl.theme.css";
+@import "../plugins/owl.transitions.css";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+
+@import "variables";
+@import "elements/header";
+@import "elements/slider";
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow: hidden;
+}
+
+
+
+@keyframes enterLeft {
+  0% {
+    left: 3%;
+    opacity: 0;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes enterRight {
+  0% {
+    right: 3%;
+    opacity: 0;
+  }
+  100% {
+    right: 50%;
+    opacity: 1;
+  }
+}
+
+.animated-content {
+	position: relative;
+	height: 100vh;
+	margin-bottom: -100vh;
+	transition: all 3s ease-in-out;
+	h2 {
+		font-size: 22px;
+		position: absolute;
+		z-index: 100;
+		color: #fff;
+		font-weight: 700;
+	}
+
+	.left {
+		bottom: 10%;
+		left: 50%;
+		animation: enterLeft 1.5s;
+		transform: translateX(-50%);
+	}
+
+	.right {
+		bottom: 6%;
+		right: 50%;
+		animation: enterRight 1.5s;
+		transform: translateX(50%);
+	}
+}
+
+.animated-holder {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	text-align: center;
+	h2 {
+		font-size: 22px;
+		color: #fff;
+		font-weight: 700;
+	}
+}
