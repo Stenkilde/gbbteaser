@@ -2932,7 +2932,11 @@ header {
     @media screen {
       #slider .owl-item:nth-child(8) .image-slide {
         background-repeat: no-repeat;
-        background-position-y: left top; } }
+        background-position: left top; } }
+    @media screen and (min-width: 64em) {
+      #slider .owl-item:nth-child(8) .image-slide {
+        background-repeat: no-repeat;
+        background-position-y: bottom; } }
     #slider .owl-item:nth-child(8) .image-slide .animated-holder {
       left: auto;
       right: 0; }

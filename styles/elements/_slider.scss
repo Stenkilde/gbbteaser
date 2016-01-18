@@ -138,9 +138,12 @@
 				background: url('../assets/13_Oslo_2.jpg');
 				@media #{$small-up} {
 					background-repeat: no-repeat;
-					    background-position-y: left top;
+					    background-position: left top;
 				}
-
+				@media #{$large-up} {
+					background-repeat: no-repeat;
+					background-position-y: bottom;
+				}
 				.animated-holder {
 					left: auto;
 					right: 0;
